@@ -1,7 +1,7 @@
 import { GeneratedAvatar } from "@/components/generated-avatar";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { authClient } from "@/lib/auth-client";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, DropdownMenuPortal } from "@radix-ui/react-dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, DropdownMenuPortal } from "@/components/ui/dropdown-menu";
 import { ChevronDownIcon, CreditCardIcon, LogOutIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -39,7 +39,7 @@ export const DashboardUserButton = () => {
         />
     )}
     {/* hyanni majha mail ani email jageeavar ala */}
-    <div className="flex flex-col gap-0.5 text-left overflow-hidden flex-1 min-w-0">
+    <div className="flex flex-col gap-0.5 text-left  flex-1 min-w-0">
         <p className="text-sm truncate w-full">
         {data.user.name}
         </p>
@@ -50,7 +50,7 @@ export const DashboardUserButton = () => {
         <ChevronDownIcon className="size-4 shrink-0" />
             </DropdownMenuTrigger>
             {/* main Content */}
-            <DropdownMenuContent align="end" side="right" className="w-72">
+            <DropdownMenuContent align="end" side="right" className="w-72" >
             <DropdownMenuLabel>
                 <div className="flex flex-col gap-1">
                 <span className="font-medium truncate">{data.user.name}</span>
@@ -59,7 +59,7 @@ export const DashboardUserButton = () => {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             {/* Billing */}
-            <DropdownMenuItem className="cursor-pointer flex items-center justify-between">
+            <DropdownMenuItem className="cursor-pointer flex items-center justify-between" >
                 Billing 
             <CreditCardIcon className="size-4" />
             </DropdownMenuItem>

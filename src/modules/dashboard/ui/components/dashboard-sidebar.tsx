@@ -63,6 +63,7 @@ export const DashboadSidebar = () => {
             <SidebarContent>
                 <SidebarGroup>
                  <SidebarGroupContent>
+                    {/* section 1 */}
                 <SidebarMenu>
                     {firstSection.map((item) => (
                     <SidebarMenuItem key={item.href}>
